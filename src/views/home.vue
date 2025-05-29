@@ -243,7 +243,7 @@ export default {
     },
 
     exportLowStock() {
-      const pdfUrl = `${import.meta.env.VITE_API_BASE_URL}/inventory/low-stock.pdf`;
+      const pdfUrl = `${import.meta.env.VITE_API_BASE_URL}/api/inventory/low-stock.pdf`;
       window.open(pdfUrl, '_blank');
     },
     formatPrice(value) {

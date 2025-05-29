@@ -243,9 +243,8 @@ export default {
     },
 
     exportLowStock() {
-  const url = 'http://127.0.0.1:8000/api/inventory/low-stock.pdf/';
-  window.open(url, '_blank'); // Triggers PDF download
-
+      const pdfUrl = `${import.meta.env.VITE_API_BASE_URL}/api/inventory/low-stock.pdf`;
+      window.open(pdfUrl, '_blank'); // Triggers PDF download
     },
     formatPrice(value) {
       return value ? Number(value).toLocaleString('en-PH', {

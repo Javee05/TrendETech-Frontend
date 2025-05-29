@@ -147,7 +147,7 @@ export default {
       const token = localStorage.getItem('access_token'); // Retrieve the token from localStorage
 
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/inventory/', {
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/inventory/`, {
           headers: {
             Authorization: `Bearer ${token}` // Attach the token to the Authorization header
           }
@@ -175,8 +175,7 @@ export default {
       formData.append('csv_file', this.file);
   
       try {
-        await axios.post('http://127.0.0.1:8000/admin/inventory/inventory/upload-csv/', formData, {
-          headers: { 'Content-Type': 'multipart/form-data' }
+       await axios.post('http://127.0.0.1:8000/admin/inventory/inventory/upload-csv/', formData, {
         });
         this.message = '✅ CSV uploaded successfully!';
         this.fetchInventory(); // Refresh data

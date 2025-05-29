@@ -16,7 +16,7 @@
   
   const loadLowStock = async () => {
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/inventory/low-stock/');
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/inventory/low-stock/`);
       const data = await res.json();
       lowStockItems.value = data;
     } catch (error) {

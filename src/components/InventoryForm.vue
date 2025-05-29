@@ -56,7 +56,7 @@ export default {
   },
   methods: {
     submitForm() {
-      axios.post('http://127.0.0.1:8000/api/inventory/', this.form)
+      axios.post(`${api}/api/inventory/`, this.form)
         .then(() => {
           this.message = '✅ Inventory item submitted successfully!'
           this.isSuccess = true

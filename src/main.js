@@ -1,9 +1,16 @@
+// Developed by: Floren Javee v. Cruz
+//                 Adam Jared F. Ranon
+//                 March 2025 - June 2025
+
+
+
+
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import axios from 'axios'
 
-// ✅ Inject token before every request
+// Inject token before every request
 axios.interceptors.request.use(config => {
   const token = localStorage.getItem('access_token');
   if (token) {
@@ -12,7 +19,7 @@ axios.interceptors.request.use(config => {
   return config;
 }, error => Promise.reject(error));
 
-// ✅ Auto refresh access token if expired
+// Auto refresh access token if expired
 axios.interceptors.response.use(
   response => response,
   async error => {
@@ -41,7 +48,7 @@ axios.interceptors.response.use(
   }
 );
 
-// ✅ Mount Vue app
+// Mount Vue app
 const app = createApp(App);
 app.use(router);
 app.mount('#app');

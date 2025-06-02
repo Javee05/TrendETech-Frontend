@@ -1,3 +1,8 @@
+<!-- Developed by: Floren Javee v. Cruz -->
+<!--                 Adam Jared F. Ranon -->
+<!--                 March 2025 - June 2025 -->
+
+
 <template>
   <header class="custom-header">
     <div class="header-left">

@@ -1,3 +1,10 @@
+// Developed by: Floren Javee v. Cruz
+//                 Adam Jared F. Ranon
+//                 March 2025 - June 2025
+
+
+
+
 import axios from 'axios';
 
 const instance = axios.create({

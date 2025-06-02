@@ -1,3 +1,9 @@
+<!-- Developed by: Floren Javee v. Cruz -->
+<!--                 Adam Jared F. Ranon -->
+<!--                 March 2025 - June 2025 -->
+
+
+
 <template>
     <div v-if="lowStockItems.length > 0">
       <h3>⚠️ Low Stock Alerts</h3>

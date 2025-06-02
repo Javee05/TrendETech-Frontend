@@ -1,3 +1,8 @@
+<!-- Developed by: Floren Javee v. Cruz -->
+<!--                 Adam Jared F. Ranon -->
+<!--                 March 2025 - June 2025 -->
+
+
 <template>
   <div class="form-container">
     <h2>➕ Add / Edit Inventory</h2>

@@ -1,3 +1,8 @@
+// Developed by: Floren Javee v. Cruz
+//                 Adam Jared F. Ranon
+//                 March 2025 - June 2025
+
+
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/home.vue'
 import Login from '../views/login.vue'

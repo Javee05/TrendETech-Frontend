@@ -35,6 +35,14 @@
           <input type="email" v-model="registerEmail" required />
         </div>
         <div class="form-group">
+          <label>Address:</label>
+          <input v-model="registerAddress" required />
+        </div>
+        <div class="form-group">
+          <label>Mobile Number:</label>
+          <input v-model="registerMobileNumber" required />
+        </div>
+        <div class="form-group">
           <label>Password:</label>
           <input type="password" v-model="registerPassword" required />
         </div>
@@ -63,6 +71,8 @@ export default {
       registerUsername: '',
       registerEmail: '',
       registerPassword: '',
+      registerAddress: '',
+      registerMobileNumber: '',
       registerMsg: ''
     }
   },
@@ -86,7 +96,9 @@ export default {
         await axios.post('/register/', {
           username: this.registerUsername,
           email: this.registerEmail,
-          password: this.registerPassword
+          password: this.registerPassword,
+          address: this.registerAddress,
+          mobile_number: this.registerMobileNumber
         })
         this.registerMsg = '✅ Registration successful. Please log in.'
         setTimeout(() => {

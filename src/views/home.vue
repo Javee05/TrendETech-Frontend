@@ -29,6 +29,7 @@
             <th>Category</th>
             <th @click="sortTable('total_sales_stock')" title="Sort by Stock">Stock <span :class="getSortIndicator('total_sales_stock')"></span></th>
             <th>Wholesale Price</th>
+            <th>Wholesale Promo Price</th>
           </tr>
         </thead>
         <tbody>
@@ -39,6 +40,7 @@
             <td>{{ item.parent_category }}</td>
             <td :class="getStockClass(item.total_sales_stock)">{{ item.total_sales_stock }}</td>
             <td>{{ formatPrice(item.wholesale_price) }}</td>
+            <td>{{ formatPrice(item.wholesale_promo_price) }}</td>
           </tr>
         </tbody>
       </table>
